@@ -1,0 +1,68 @@
+CONTROL DE RESIDUOS - VERSION WEB PARA GITHUB PAGES
+
+ESTE PAQUETE SI INCLUYE LOS ARCHIVOS DE LA WEB.
+No requiere Visual Studio, CMake, FTXUI ni compilacion.
+
+PUBLICAR PASO A PASO
+1. Extraiga este ZIP completo en su computadora.
+2. Entre a github.com con su cuenta y cree un repositorio nuevo:
+   nombre sugerido: control-residuos; visibilidad: Public.
+3. En el repositorio elija Add file > Upload files.
+   Suba TODOS los archivos extraidos, no el ZIP ni una carpeta que los envuelva.
+   index.html debe quedar visible directamente en la raiz del repositorio.
+4. Pulse Commit changes para guardar.
+5. Entre a Settings > Pages.
+6. En Source seleccione Deploy from a branch.
+7. Seleccione main y /(root), y pulse Save.
+8. Espere a que GitHub termine la publicacion. Copie el enlace que muestra Pages.
+   Si no aparece enseguida, revise la pestaña Actions o vuelva a cargar Pages.
+
+INSTALAR EN EL CELULAR
+Abra SU enlace publicado con Chrome en Android.
+Pulse Instalar app, o menu de Chrome > Instalar aplicacion / Agregar a pantalla
+principal. El nombre de la opcion depende del navegador.
+En iPhone: Safari > Compartir > Agregar a pantalla de inicio.
+Es una PWA (app web instalable), no un APK.
+No necesita una cuenta de ChatGPT para usarla publicada en GitHub Pages.
+
+PRIMER USO
+Registro: elija fecha y tipo, escriba kilos positivos y pulse Registrar ingreso.
+Historial: revise los ingresos y filtre por tipo.
+Reporte por periodo: elija hoy, mes, anio o un rango y genere su informe.
+Reportes guardados: abra los informes anteriores o descarguelos como .txt.
+
+DATOS
+Se conservan en el navegador, sin servidor de datos ni base de datos.
+Cada persona y cada dispositivo tienen sus propios registros.
+Use Exportar respaldo regularmente. El archivo incluye ingresos y reportes.
+Importar respaldo permite trasladarlos a otro dispositivo o a una nueva URL.
+Los datos del sitio anterior de ChatGPT NO se trasladan solos: exporte alli
+el respaldo e importelo en el enlace de GitHub.
+No suba sus respaldos personales al repositorio publico.
+Borrar los datos del navegador elimina los registros locales.
+
+LIMITACIONES
+Maximo 500 ingresos y cinco tipos. Se incluyen fechas reales y rangos inclusivos.
+Clasificacion: menos de 10000 kg Poca; 10000 a 50000 kg Mediana; mas Mucha.
+Los reportes son instantaneas: nuevos ingresos no cambian reportes anteriores.
+La app puede trabajar sin conexion despues de una primera carga completa y
+correcta. La primera carga e instalacion necesitan conexion.
+No abra index.html mediante doble clic para probar: los modulos JavaScript y
+el almacenamiento necesitan un servidor web. Publique en Pages o, si ya tiene
+Python instalado, ejecute: python -m http.server 8000
+Luego abra http://localhost:8000/ en su navegador.
+
+PARA LA ENTREGA ACADEMICA
+Esta version usa HTML, CSS y JavaScript con tres arreglos tipados de 500 elementos.
+Es una adaptacion de las funciones del proyecto. Si la materia exige C++17 y
+FTXUI, presente tambien el paquete de terminal que recibio anteriormente.
+
+ARCHIVOS
+index.html: pantallas.
+style.css: apariencia adaptable a celular y computadora.
+app.mjs: interaccion, almacenamiento, respaldos e instalacion.
+core.mjs: reglas, arreglos, validaciones y calculos.
+manifest.webmanifest, sw.js e iconos: app instalable y cache sin conexion.
+.nojekyll: evita el procesamiento de Jekyll en GitHub Pages.
+Las rutas relativas permiten publicar en la raiz de un dominio o dentro de
+un repositorio, sin cambiar el nombre del repositorio en el codigo.
